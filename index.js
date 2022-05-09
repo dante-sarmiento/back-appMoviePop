@@ -17,7 +17,3 @@ async function connect() {
     } 
 }
 connect();
-
-app.get('/', function(req, res) {
-    res.send("El servidor esta respondiendo correctamente 2")
-});
