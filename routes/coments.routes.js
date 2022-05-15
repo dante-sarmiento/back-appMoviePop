@@ -7,7 +7,7 @@ const isAdmin = require("../middlewares/isAdmin")
 api.post("/coments", comentsController.createComents);
 api.get("/coments", comentsController.getComents);
 
-api.delete("/user/:id", comentsController.deleteComents);
+api.delete("/coments/:id", comentsController.deleteComents);
 
 
 module.exports = api;
