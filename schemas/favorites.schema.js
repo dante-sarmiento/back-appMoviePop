@@ -6,7 +6,7 @@ var favoritesSchema = new Schema ({
         type: Object,
         required: true
     },
-    movie: {
+    movieId: {
         type: Object,
         required: true
     }

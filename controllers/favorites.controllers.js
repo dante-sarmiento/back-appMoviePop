@@ -18,12 +18,12 @@ async function getFavorites(req,res){
 
 async function deleteFavorite(req, res){
     
-    const favorite_deleted = req.query.id; /*query*/
+    const favorite_deleted = req.params.id; /*query*/
 
-    const favorite = await Favorites.findByIdAndDelete(favorite_deleted);
-    console.log(favorite);
+    const favoriteDelete = await Favorites.findByIdAndDelete(favorite_deleted);
+    console.log(favoriteDelete);
     
-    res.send({favoriteDeleted: favorite });
+    res.send({favoriteDeleted: favoriteDelete });
 }
 
 
