@@ -2,12 +2,16 @@ var Favorites = require("../schemas/favorites.schema")
 
 async function createFavorite(req, res){
     try{
-        let newFavorite= new Favorites(req.body);
-        await newFavorite.save()
-        res.send({ Favorites: newFavorite })
-    }
-    catch(error){
-        res.status(400).send('error')
+        if(!req.body){
+            return res.status(400).send({message:"falta un dato obligatorio"})
+        }
+        let newFavorites = new Favorites(req.body);
+        await newFavorites.save()
+        res.send({
+            FavoriteMovie: newFavorites
+        })
+    } catch(error){
+        res.status(400).send(error)
     }
 }
 
