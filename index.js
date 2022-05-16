@@ -1,5 +1,5 @@
 var app = require('./app');
-var port = 3100;
+var port = process.env.PORT || 3100;
 const password = 'devaccount1234';
 var URL = `mongodb+srv://DanteDev:${password}@clustermoviepop.g2hyb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 var mongoose = require('mongoose');
